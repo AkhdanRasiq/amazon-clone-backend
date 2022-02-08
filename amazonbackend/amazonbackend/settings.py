@@ -10,17 +10,22 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+import json
 from pathlib import Path
+import utils.path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR        = Path(__file__).resolve().parent.parent
+projectPath     = utils.path
 
+with open(projectPath.pathConfig, 'r') as file:
+        CONFIG = json.loads(file.read())
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+SECRET_KEY = 'django-insecure-*o(&^f%xuk@tz+nl!%+=1_ghe#pgdmmv&&9&_f009!u(ey4mc8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -76,8 +81,15 @@ WSGI_APPLICATION = 'amazonbackend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE'        : 'django.db.backends.mysql',
+        'NAME'          : CONFIG['database']['name'],
+        'USER'          : CONFIG['database']['user'],
+        'PASSWORD'      : CONFIG['database']['password'],
+        'HOST'          : CONFIG['database']['host'],
+        'PORT'          : CONFIG['database']['port'],
+        'OPTIONS': {
+            'sql_mode'  : 'traditional',
+        }
     }
 }
 
