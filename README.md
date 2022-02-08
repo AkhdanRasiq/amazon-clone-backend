@@ -5,7 +5,7 @@ This repository containing clone version of Amazon for Education purpose only!
 ## MAIN TECH STACK
 
 1. Pyhton3.8 - Linux
-2. Django
+2. Django - Rest Framework
 
 <br />
 
