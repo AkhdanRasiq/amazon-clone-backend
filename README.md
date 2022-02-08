@@ -6,6 +6,7 @@ This repository containing clone version of Amazon for Education purpose only!
 
 1. Pyhton3.8 - Linux
 2. Django - Rest Framework
+3. MySQL
 
 <br />
 
@@ -32,10 +33,41 @@ You need WSL(Windows Subsystem for Linux) for running the server. Go to **Contro
 
 The List of all Require Dependencies are in requirements.txt at the root of project, run this command to install all of it ```pip install -r requirements.txt``` in new python environment.
 
-## START SERVER
+***IF YOU GET ERROR WHEN INSTALLING [ mysqlclient ] FOLLOW BELOW STEP:***
 
+### WINDOWS
+
+[DOWNLOAD mysqlclient](https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient)
+
+Then Run
+
+```
+pip install {downloadedFile.whl}
+```
+
+### LINUX
+```
+sudo apt-get install python3.8-dev default-libmysqlclient-dev build-essential
+```
+
+# Command List
+
+### START SERVER
 ```
 python manage.py runserver
 ```
 
+### CREATE SUPER USER
+```
+python manage.py createsuperuser
+```
 
+### UPDATE DATA FOR MIGRATION
+```
+python manage.py makemigrations
+```
+
+### MIGRATE DATA TO DATABASE
+```
+python manage.py migrate
+```

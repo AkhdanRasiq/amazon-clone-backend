@@ -1,0 +1,11 @@
+{
+  "database": {
+    "protocol"              : "mysql://",
+    "user"                  : "root",
+    "password"              : "",
+    "host"                  : "127.0.0.1",
+    "port"                  : "3306",
+    "additional_path"       : "",
+    "name"                  : "amazon_clone"
+  }
+}
