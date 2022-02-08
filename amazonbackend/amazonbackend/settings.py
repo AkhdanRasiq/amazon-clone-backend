@@ -25,7 +25,8 @@ with open(projectPath.pathConfig, 'r') as file:
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-*o(&^f%xuk@tz+nl!%+=1_ghe#pgdmmv&&9&_f009!u(ey4mc8'
+# 
+SECRET_KEY = 'SECRET_KEY_HERE!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
