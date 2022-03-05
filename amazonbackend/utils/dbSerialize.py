@@ -5,5 +5,6 @@ class dbSerialize:
       "id"      : (a_objProduct.id),
       "title"   : (a_objProduct.title),
       "price"   : (a_objProduct.price),
-      "rating"  : (a_objProduct.rating)
+      "rating"  : (a_objProduct.rating),
+      "imgUrl"  : (a_objProduct.imgUrl)
     }
